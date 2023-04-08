@@ -17,17 +17,22 @@
                 double intereses = saldo * interesMensual; //15
                 saldo += intereses;                        //1000 + 15
                 saldo -= pagoMensual;                      //1000 - pago  (ej 1000-100)                             
-                pagado += pagoMensual;                     // 0 + 100
+                pagado += pagoMensual + interesMensual;         // 0 + 100
                 contadorMes++;
 
+                Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine("Mes: " + contadorMes);
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Saldo actual: " + saldo.ToString("C2"));
-                Console.WriteLine("Total pagado: " + saldo.ToString("C2"));
-
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.WriteLine("Total pagado: " + pagado.ToString("C2"));
+                Console.ResetColor();
             }
 
-            // SALDO < 0 
+            //SALDO < 0
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("¡Deuda saldada!");
+            Console.ResetColor();
 
         }
     }
