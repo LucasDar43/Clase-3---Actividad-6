@@ -4,6 +4,13 @@
     {
         static void Main(string[] args)
         {
+            /*
+            6)	Supongamos que usted le debe $1000 a la compañía de la tarjeta de crédito y los intereses son de 1.5% del saldo. 
+                Usted opta por dejar de usar la tarjeta y pagar mensualmente una cantidad fija. 
+                Escriba un programa que permita el ingreso de un monto y luego liste los saldos 
+                y el total pagado hasta que se salde la deuda. 
+            */
+            
             double interesMensual = 0.015;
             double saldo = 1000;
             double pagado = 0;
